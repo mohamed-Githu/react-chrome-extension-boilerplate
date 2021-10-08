@@ -1,0 +1,19 @@
+npm init -y
+
+mkdir src public
+
+touch .gitignore webpack.config.js webpack.dev.js webpack.prod.js public/manifest.json src/popup.html src/popup.jsx
+
+npm i --save react reac-dom
+npm install --save-dev webpack webpack-cli
+npm i --save-dev babel-loader @babel/core @babel/preset-env @babel/preset-react
+npm i --save-dev html-webpack-plugin
+npm i --save-dev copy-webpack-plugin
+npm i --save-dev webpack-merge
+
+-------------------------------------------------------
+
+"scripts": {
+  "start": "webpack --watch --progress --config webpack.config.js",
+  "build": "webpack --config webpack.config.js"
+},
